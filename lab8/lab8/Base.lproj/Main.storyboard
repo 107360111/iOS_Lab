@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xey-zx-CGb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--矩陣運算-->
+        <scene sceneID="mwo-vW-T5j">
+            <objects>
+                <viewController id="z7G-gX-28C" customClass="matrixCountVC" customModule="lab8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zQ9-Iz-aWV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="陣列1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Rd0-P0-EmS">
+                                <rect key="frame" x="0.0" y="64" width="207" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Rd0-P0-EmS" secondAttribute="height" id="0wf-Y9-OMs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="陣列2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="C5a-ku-N7s">
+                                <rect key="frame" x="207" y="64" width="207" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="C5a-ku-N7s" secondAttribute="height" id="e8S-vY-wH7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="相乘結果" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DWN-lo-1vG">
+                                <rect key="frame" x="0.0" y="271" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DWN-lo-1vG" secondAttribute="height" id="dqS-u1-L4l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7e-yK-CRt">
+                                <rect key="frame" x="25" y="685" width="364" height="30"/>
+                                <state key="normal" title="產生兩矩陣並相乘"/>
+                                <connections>
+                                    <action selector="createMatrix:" destination="z7G-gX-28C" eventType="touchUpInside" id="hoM-Lk-w4n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="l9x-cO-hKN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="l9x-cO-hKN" firstAttribute="trailing" secondItem="k7e-yK-CRt" secondAttribute="trailing" constant="25" id="4Gq-Gk-UCw"/>
+                            <constraint firstItem="l9x-cO-hKN" firstAttribute="trailing" secondItem="DWN-lo-1vG" secondAttribute="trailing" id="6ph-fV-kfK"/>
+                            <constraint firstItem="k7e-yK-CRt" firstAttribute="top" secondItem="DWN-lo-1vG" secondAttribute="bottom" id="C3f-md-JAe"/>
+                            <constraint firstItem="l9x-cO-hKN" firstAttribute="trailing" secondItem="C5a-ku-N7s" secondAttribute="trailing" id="J3U-Cf-Ube"/>
+                            <constraint firstItem="DWN-lo-1vG" firstAttribute="top" secondItem="Rd0-P0-EmS" secondAttribute="bottom" id="N6d-t5-m2e"/>
+                            <constraint firstItem="Rd0-P0-EmS" firstAttribute="top" secondItem="l9x-cO-hKN" secondAttribute="top" constant="20" id="Nwr-hi-f18"/>
+                            <constraint firstItem="C5a-ku-N7s" firstAttribute="width" secondItem="Rd0-P0-EmS" secondAttribute="width" id="eQs-oU-bZc"/>
+                            <constraint firstItem="C5a-ku-N7s" firstAttribute="top" secondItem="l9x-cO-hKN" secondAttribute="top" constant="20" id="fr8-kK-Zlo"/>
+                            <constraint firstItem="k7e-yK-CRt" firstAttribute="leading" secondItem="l9x-cO-hKN" secondAttribute="leading" constant="25" id="h7A-g2-Vyp"/>
+                            <constraint firstItem="Rd0-P0-EmS" firstAttribute="leading" secondItem="l9x-cO-hKN" secondAttribute="leading" id="lhc-9c-uiH"/>
+                            <constraint firstItem="C5a-ku-N7s" firstAttribute="leading" secondItem="Rd0-P0-EmS" secondAttribute="trailing" id="uMC-x3-HLb"/>
+                            <constraint firstItem="DWN-lo-1vG" firstAttribute="leading" secondItem="l9x-cO-hKN" secondAttribute="leading" id="xaK-Lk-5PM"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="矩陣運算" id="9sV-Z8-Fih"/>
+                    <connections>
+                        <outlet property="matrix1Label" destination="Rd0-P0-EmS" id="dpo-7P-oQn"/>
+                        <outlet property="matrix2Label" destination="C5a-ku-N7s" id="a8h-Pe-OBb"/>
+                        <outlet property="matrix3Label" destination="DWN-lo-1vG" id="0V5-Uj-7pC"/>
+                        <outlet property="startBtn" destination="k7e-yK-CRt" id="ZoU-ex-RuW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jBt-uf-up9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="-156"/>
+        </scene>
+        <!--龜兔賽跑-->
+        <scene sceneID="fHD-cJ-Qua">
+            <objects>
+                <viewController id="gDZ-fL-5y3" customClass="raceVC" customModule="lab8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yRb-jr-Gxx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="龜兔賽跑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTu-sR-Qic">
+                                <rect key="frame" x="15" y="59" width="82" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="兔子" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFf-RJ-189">
+                                <rect key="frame" x="15" y="108" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="烏龜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPR-aJ-GYt">
+                                <rect key="frame" x="15" y="154" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="sBS-uc-erk">
+                                <rect key="frame" x="67" y="118" width="302" height="2.5"/>
+                                <color key="trackTintColor" systemColor="systemRedColor"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="fPh-Z7-UbP">
+                                <rect key="frame" x="67" y="164" width="302" height="2.5"/>
+                                <color key="trackTintColor" systemColor="systemRedColor"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rr-kR-oJy">
+                                <rect key="frame" x="25" y="195.5" width="364" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="開始">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startBtnClick:" destination="gDZ-fL-5y3" eventType="touchUpInside" id="QxE-h0-PiE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xwy-xo-Vj4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cTu-sR-Qic" firstAttribute="leading" secondItem="xwy-xo-Vj4" secondAttribute="leading" constant="15" id="1PJ-ru-IKf"/>
+                            <constraint firstItem="xwy-xo-Vj4" firstAttribute="trailing" secondItem="9rr-kR-oJy" secondAttribute="trailing" constant="25" id="3Vo-0l-kQP"/>
+                            <constraint firstItem="PFf-RJ-189" firstAttribute="top" secondItem="cTu-sR-Qic" secondAttribute="bottom" constant="25" id="6js-Go-toZ"/>
+                            <constraint firstItem="uPR-aJ-GYt" firstAttribute="top" secondItem="PFf-RJ-189" secondAttribute="bottom" constant="25" id="BIm-9r-FoO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fPh-Z7-UbP" secondAttribute="trailing" constant="25" id="DK8-RK-S0X"/>
+                            <constraint firstItem="sBS-uc-erk" firstAttribute="leading" secondItem="uPR-aJ-GYt" secondAttribute="trailingMargin" constant="25" id="HUJ-bT-a85"/>
+                            <constraint firstItem="sBS-uc-erk" firstAttribute="centerY" secondItem="PFf-RJ-189" secondAttribute="centerY" id="HYE-O4-Lzv"/>
+                            <constraint firstItem="PFf-RJ-189" firstAttribute="leading" secondItem="xwy-xo-Vj4" secondAttribute="leading" constant="15" id="Jo0-cL-fDe"/>
+                            <constraint firstItem="9rr-kR-oJy" firstAttribute="top" secondItem="fPh-Z7-UbP" secondAttribute="bottom" constant="30" id="KWh-i5-Xob"/>
+                            <constraint firstItem="cTu-sR-Qic" firstAttribute="top" secondItem="xwy-xo-Vj4" secondAttribute="top" constant="15" id="SmO-Y4-CIJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sBS-uc-erk" secondAttribute="trailing" constant="25" id="VLh-GE-139"/>
+                            <constraint firstItem="9rr-kR-oJy" firstAttribute="leading" secondItem="xwy-xo-Vj4" secondAttribute="leading" constant="25" id="Y9f-KV-qhN"/>
+                            <constraint firstItem="uPR-aJ-GYt" firstAttribute="leading" secondItem="xwy-xo-Vj4" secondAttribute="leading" constant="15" id="dvG-w1-Uh7"/>
+                            <constraint firstItem="fPh-Z7-UbP" firstAttribute="leading" secondItem="uPR-aJ-GYt" secondAttribute="trailingMargin" constant="25" id="f5e-jh-xLC"/>
+                            <constraint firstItem="fPh-Z7-UbP" firstAttribute="centerY" secondItem="uPR-aJ-GYt" secondAttribute="centerY" id="iEX-EX-7BT"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="龜兔賽跑" id="Vhr-oT-n5Z"/>
+                    <connections>
+                        <outlet property="rabbitProgress" destination="sBS-uc-erk" id="Yjw-Mn-eAq"/>
+                        <outlet property="turtleProgress" destination="fPh-Z7-UbP" id="nVf-9I-UoO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6fu-Dj-c5Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-542" y="-156"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="FTE-wc-LJI">
+            <objects>
+                <tabBarController id="Xey-zx-CGb" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K7q-dx-9g4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gDZ-fL-5y3" kind="relationship" relationship="viewControllers" id="T6m-rp-Esy"/>
+                        <segue destination="z7G-gX-28C" kind="relationship" relationship="viewControllers" id="Xfp-QF-KAr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rDG-6I-6MT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1278" y="-156"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

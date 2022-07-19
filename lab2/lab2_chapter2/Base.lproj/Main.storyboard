@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lab2_chapter2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請輸入姓名以開始遊戲" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3SX-di-BlN">
+                                <rect key="frame" x="120.5" y="98" width="173.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4aL-rQ-fip">
+                                <rect key="frame" x="138.5" y="128.5" width="137" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="w4K-cE-qJ5"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="剪刀"/>
+                                    <segment title="石頭"/>
+                                    <segment title="布"/>
+                                </segments>
+                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="B1n-y1-0cO">
+                                <rect key="frame" x="45.5" y="214.5" width="323" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名字" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LC4-nE-u7g">
+                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="勝利者" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEO-sd-Iu6">
+                                        <rect key="frame" x="84.5" y="0.0" width="69.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我方出拳" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhJ-IG-KAb">
+                                        <rect key="frame" x="169" y="0.0" width="69.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="電腦出拳" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cs6-Jq-Mbj">
+                                        <rect key="frame" x="253.5" y="0.0" width="69.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入玩家姓名" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jCp-hR-K1m">
+                                <rect key="frame" x="10" y="54" width="394" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="dgM-3q-U1t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyK-xd-Ooj">
+                                <rect key="frame" x="191.5" y="169.5" width="31" height="30"/>
+                                <state key="normal" title="猜拳"/>
+                                <connections>
+                                    <action selector="startBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nMI-wY-9Mg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4aL-rQ-fip" firstAttribute="top" secondItem="3SX-di-BlN" secondAttribute="bottom" constant="10" id="1RT-D3-vmB"/>
+                            <constraint firstItem="jCp-hR-K1m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="21W-bd-to0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jCp-hR-K1m" secondAttribute="trailing" constant="10" id="3l6-Op-TeW"/>
+                            <constraint firstItem="B1n-y1-0cO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ut3-CG-pLJ"/>
+                            <constraint firstItem="3SX-di-BlN" firstAttribute="top" secondItem="jCp-hR-K1m" secondAttribute="bottom" constant="10" id="i9S-mm-udD"/>
+                            <constraint firstItem="4aL-rQ-fip" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kb2-Hx-BvX"/>
+                            <constraint firstItem="RyK-xd-Ooj" firstAttribute="top" secondItem="4aL-rQ-fip" secondAttribute="bottom" constant="10" id="mKm-JE-M3n"/>
+                            <constraint firstItem="3SX-di-BlN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oIm-A7-LAm"/>
+                            <constraint firstItem="jCp-hR-K1m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="raR-lF-wI4"/>
+                            <constraint firstItem="RyK-xd-Ooj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xX7-5G-pMb"/>
+                            <constraint firstItem="B1n-y1-0cO" firstAttribute="top" secondItem="RyK-xd-Ooj" secondAttribute="bottom" constant="15" id="zhq-NR-F6B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mySelectLabel" destination="JhJ-IG-KAb" id="y9d-hj-O2b"/>
+                        <outlet property="nameField" destination="jCp-hR-K1m" id="MCN-s5-qJY"/>
+                        <outlet property="nameLabel" destination="LC4-nE-u7g" id="2yL-Ds-Mvh"/>
+                        <outlet property="pcSelectLabel" destination="Cs6-Jq-Mbj" id="Yud-Yx-NXC"/>
+                        <outlet property="textLabel" destination="3SX-di-BlN" id="n7M-JV-NHZ"/>
+                        <outlet property="userSelectSegment" destination="4aL-rQ-fip" id="RNf-6P-8IB"/>
+                        <outlet property="winnerLabel" destination="eEO-sd-Iu6" id="bo7-0Z-zDw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
