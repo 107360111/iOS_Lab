@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lab12" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="書名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2f-J1-02L" userLabel="書名">
+                                <rect key="frame" x="10" y="54" width="35" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="價格" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcO-BM-wav" userLabel="價格">
+                                <rect key="frame" x="10" y="99.5" width="35" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bUm-VC-7um" userLabel="Name Text Field">
+                                <rect key="frame" x="60" y="47.5" width="339" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gUW-Qc-m4F" userLabel="Price Text Field">
+                                <rect key="frame" x="60" y="93" width="339" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAJ-NQ-RCD">
+                                <rect key="frame" x="15" y="152" width="384" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egc-0G-4Mf" userLabel="查詢">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="查詢"/>
+                                        <connections>
+                                            <action selector="searchBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rnq-IX-6hT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBG-wp-YOn" userLabel="新增">
+                                        <rect key="frame" x="96" y="0.0" width="96" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="新增"/>
+                                        <connections>
+                                            <action selector="addNewBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iDY-oz-xTu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vW-dw-ASt" userLabel="修改">
+                                        <rect key="frame" x="192" y="0.0" width="96" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="修改"/>
+                                        <connections>
+                                            <action selector="editBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ewo-zn-ZxQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecT-kk-baV" userLabel="刪除">
+                                        <rect key="frame" x="288" y="0.0" width="96" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="刪除"/>
+                                        <connections>
+                                            <action selector="removeBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mil-P0-AoF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wtt-KS-79f">
+                                <rect key="frame" x="0.0" y="183" width="414" height="679"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="wU7-rs-v5x"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="E8y-lO-kki"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bUm-VC-7um" firstAttribute="centerY" secondItem="T2f-J1-02L" secondAttribute="centerY" id="4nB-J6-Pij"/>
+                            <constraint firstItem="T2f-J1-02L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="65m-19-JEF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gUW-Qc-m4F" secondAttribute="trailing" constant="15" id="9hH-zR-W4v"/>
+                            <constraint firstItem="bUm-VC-7um" firstAttribute="leading" secondItem="T2f-J1-02L" secondAttribute="trailing" constant="15" id="EG5-bi-iFR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wtt-KS-79f" secondAttribute="bottom" id="Eim-0h-UMe"/>
+                            <constraint firstItem="wtt-KS-79f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MKa-IC-M0b"/>
+                            <constraint firstItem="WcO-BM-wav" firstAttribute="top" secondItem="T2f-J1-02L" secondAttribute="bottom" constant="25" id="WVY-z9-F0Y"/>
+                            <constraint firstItem="wAJ-NQ-RCD" firstAttribute="top" secondItem="gUW-Qc-m4F" secondAttribute="bottom" constant="25" id="Zcl-c8-OYT"/>
+                            <constraint firstItem="gUW-Qc-m4F" firstAttribute="centerY" secondItem="WcO-BM-wav" secondAttribute="centerY" id="b1d-6p-L2W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wAJ-NQ-RCD" secondAttribute="trailing" constant="15" id="ikS-vZ-TF9"/>
+                            <constraint firstItem="wAJ-NQ-RCD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="jQj-eB-OfK"/>
+                            <constraint firstItem="gUW-Qc-m4F" firstAttribute="leading" secondItem="WcO-BM-wav" secondAttribute="trailing" constant="15" id="p6e-3u-3QL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bUm-VC-7um" secondAttribute="trailing" constant="15" id="qEN-Ih-oBK"/>
+                            <constraint firstItem="WcO-BM-wav" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="qWd-YT-gJL"/>
+                            <constraint firstItem="T2f-J1-02L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="sFr-tt-GPT"/>
+                            <constraint firstItem="wtt-KS-79f" firstAttribute="top" secondItem="wAJ-NQ-RCD" secondAttribute="bottom" id="tbt-9O-6l9"/>
+                            <constraint firstItem="wtt-KS-79f" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vJh-2v-ZMg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="bUm-VC-7um" id="DTp-gA-DaU"/>
+                        <outlet property="priceTextField" destination="gUW-Qc-m4F" id="yS3-Yq-XSP"/>
+                        <outlet property="tableView" destination="wtt-KS-79f" id="CMc-fG-eq8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
